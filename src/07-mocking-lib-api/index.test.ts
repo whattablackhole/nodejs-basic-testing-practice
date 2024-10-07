@@ -6,8 +6,11 @@ jest.mock('axios');
 const mockedAxios = axios as jest.Mocked<typeof axios>;
 
 describe('throttledGetDataFromApi', () => {
-  beforeEach(() => {
+  beforeAll(()=> {
     jest.useFakeTimers();
+  });
+  
+  beforeEach(() => {
     mockedAxios.create.mockReturnThis();
     mockedAxios.get.mockResolvedValue({ data: 'data' });
   });
