@@ -16,6 +16,9 @@ describe('doStuffByTimeout', () => {
 
   afterAll(() => {
     jest.useRealTimers();
+    jest.unmock('fs/promises');
+    jest.unmock('fs');
+    jest.unmock('path');
   });
 
   test('should set timeout with provided callback and timeout', () => {
