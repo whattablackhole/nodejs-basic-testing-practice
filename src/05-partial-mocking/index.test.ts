@@ -17,7 +17,7 @@ describe('partial mocking', () => {
   });
 
   test('mockOne, mockTwo, mockThree should not log into console', () => {
-    const consoleSpy = jest.spyOn(console, 'log').mockImplementation(() => {});
+    const consoleSpy = jest.spyOn(console, 'log').mockImplementation();
 
     mockOne();
     mockTwo();
@@ -27,7 +27,7 @@ describe('partial mocking', () => {
   });
 
   test('unmockedFunction should log into console', () => {
-    const consoleSpy = jest.spyOn(console, 'log').mockImplementation(() => {});
+    const consoleSpy = jest.spyOn(console, 'log').mockImplementation();
 
     unmockedFunction();
 

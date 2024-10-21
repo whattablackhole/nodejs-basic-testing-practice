@@ -4,7 +4,7 @@ describe('generateLinkedList', () => {
   test('should generate linked list from values 1', () => {
     const values = [1, 2, 3];
 
-    let list = generateLinkedList(values);
+    const list = generateLinkedList(values);
 
     expect(list).toStrictEqual({
       value: 1,
